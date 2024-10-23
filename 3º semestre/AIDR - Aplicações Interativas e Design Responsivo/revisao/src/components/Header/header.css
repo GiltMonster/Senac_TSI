@@ -1,0 +1,14 @@
+header{
+    background-color: #454545;
+    width: 100%;
+    padding: 20px 0;
+    margin: 30px 0 ;
+    border-radius: 999px;
+    border: 2px solid #fbfbfb;
+
+}
+
+header h1{
+    color: white;
+    margin: 0 30px;
+}

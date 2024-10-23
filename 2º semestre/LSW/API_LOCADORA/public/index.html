@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filme</title>
+</head>
+
+<body>
+    
+    <h1>Filmes</h1>
+    <div id="filmesContainer">
+        <ul></ul>
+    </div>
+
+    <script>
+        let filmes;
+        fetch('http://localhost:8080/filmes')
+            .then(response => response.json())
+            .then(data => {
+                filmes = data;
+                displayFilmes();
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+            });
+
+        function displayFilmes() {
+            const filmesContainer = document.getElementById('filmesContainer');
+            filmesContainer.innerHTML = JSON.stringify(filmes);
+        }
+    </script>
+</body>
+
+</html>

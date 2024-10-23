@@ -1,0 +1,36 @@
+.card {
+  transition: 0.5s;
+  width: 100%;
+  height: 100px;
+}
+
+.card:hover {
+  cursor: grab;
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+}
+
+.prateleira{
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #3e3e3e;
+}
+
+.carrinho {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  
+}
+
+.naoSelecionavel {
+  -webkit-touch-callout: none; /* iPhone OS, Safari */
+  -webkit-user-select: none; /* Chrome, Safari 3 */
+  -khtml-user-select: none; /* Safari 2 */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  user-select: none; /* Possível implementação no futuro */
+  /* cursor: default; */
+}

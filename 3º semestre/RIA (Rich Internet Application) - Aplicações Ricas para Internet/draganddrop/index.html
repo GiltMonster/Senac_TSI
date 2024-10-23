@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <link href="./style.css" rel="stylesheet">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container01">
+        <h1>Exercicio 01:</h1>
+
+        <div class="container">
+            <div class="dropzone" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="dropzone" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img id="drag1" src="./assets/kirby.gif" draggable ondragstart="drag(event)" alt="Kirby muito loco">
+            </div>
+        </div>
+    </div>
+
+    <div class="container01">
+        <h1>Exercicio 02:</h1>
+
+        <div class="divs">
+            <div class="container">
+                <div class="dropzone1" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+
+            <div class="container">
+                <div class="dropzone1" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div class="container">
+                <div class="dropzone1" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div class="container">
+                <div class="dropzone1" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container01">
+        <h1>Exercicio 03:</h1>
+
+        <div class="divs1">
+            <div class="container">
+                <div class="dropzone2" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="dropzone2" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div class="container">
+                <div class="dropzone2" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div class="container">
+                <div class="dropzone2" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container01">
+        <h1>Exercicio 04:</h1>
+
+        <div class="divs1">
+
+            <div class="kamban">
+                <div class="dropzone-kambam" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img class="kambamimg" id="drag2" src="./assets/kirby.gif" draggable ondragstart="drag(event)"
+                        alt="Kirby muito loco">
+                </div>
+                <div class="dropzone-kambam" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="dropzone-kambam" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="dropzone-kambam" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+
+            <div class="kamban">
+                <div class="dropzone-kambam" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="dropzone-kambam" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="dropzone-kambam" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="dropzone-kambam" id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container01">
+        <h1>prateleira de produto:</h1>
+
+        <div class="prateleira" id="dropPrateleira" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+            <div class="prateleira-item" id="prateleira-item1" draggable ondragstart="drag(event)">
+                <p id="item1" draggable ondragstart="drag(event)"> Produto 1 -<span id="produto-valor">R$ 10,00</span> </p> 
+            </div>
+            <div class="prateleira-item" id="prateleira-item2" draggable ondragstart="drag(event)">
+                <p > Produto 2 -<span id="produto-valor">R$ 20,00</span> </p> 
+            </div>
+            <div class="prateleira-item" id="prateleira-item3" draggable ondragstart="drag(event)">
+                <p> Produto 3 -<span id="produto-valor">R$ 30,00</span> </p> 
+            </div>
+        </div>
+
+        <h1>Carrinho de compras</h1>
+        <p id="total">Total: R$ 0,00</p>
+
+        <div class="carrinho" id="dropCarrinho" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

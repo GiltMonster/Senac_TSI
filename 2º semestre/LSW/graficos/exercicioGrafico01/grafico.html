@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas Principais</title>
+    <!-- Inclua a biblioteca Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #sales-table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        #sales-table th,
+        #sales-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        #sales-table th {
+            background-color: #f2f2f2;
+        }
+
+        #chart-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #chart-page {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Gráfico de Vendas</h2>
+    <canvas id="sales-chart"></canvas>
+    <button onclick="goBack()">Voltar</button>
+
+    <script>
+        function goBack() {
+            // Volta para a página anterior
+            window.history.back();
+        }
+
+        const plugin = {
+            id: 'customCanvasBackgroundColor',
+            beforeDraw: (chart, args, options) => {
+                const { ctx } = chart;
+                ctx.save();
+                ctx.globalCompositeOperation = 'destination-over';
+                ctx.restore();
+            }
+        };
+
+        const data = {
+            labels: ["Toyota", "BYD", "Caoa Chery", "GWM", "Volvo", "BMW", "Land Rover", "Kia", "Porsche", "Audi"],
+            datasets: [{
+                label: 'Vendas de 2019',
+                data: [21042, 17943, 11835, 11473, 8179, 4431, 3712, 2382, 2044, 1830],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)'
+                ],
+                hoverOffset: 4
+            }]
+        };
+
+        // Configurações do gráfico
+        var ctx = document.getElementById('sales-chart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            plugins: [plugin],
+            options: {
+                responsive: true,
+                mainTaincanvasAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

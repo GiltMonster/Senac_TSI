@@ -1,0 +1,6 @@
+[submodule "API-Eventos"]
+	path = API-Eventos
+	url = https://github.com/FernandoMCaires/API-Eventos
+[submodule "2º semestre/LSW/API-Eventos"]
+	path = 2º semestre/LSW/API-Eventos
+	url = https://github.com/FernandoMCaires/API-Eventos

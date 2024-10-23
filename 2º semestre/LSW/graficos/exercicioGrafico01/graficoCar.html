@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas Principais</title>
+    <!-- Inclua a biblioteca Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #sales-table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        #sales-table th,
+        #sales-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        #sales-table th {
+            background-color: #f2f2f2;
+        }
+
+        #chart-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #chart-page {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Vendas Principais</h1>
+    <table id="sales-table">
+        <caption>Top 10 Veículos Mais Vendidos em 2023</caption>
+        <thead>
+            <tr>
+                <th>Veículo</th>
+                <th>Vendas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Toyota</td>
+                <td>21.042</td>
+            </tr>
+            <tr>
+                <td>BYD</td>
+                <td>17.943</td>
+            </tr>
+            <tr>
+                <td>Caoa Chery</td>
+                <td>11.835</td>
+            </tr>
+            <tr>
+                <td>GWM</td>
+                <td>11.473</td>
+            </tr>
+            <tr>
+                <td>Volvo</td>
+                <td>8.179</td>
+            </tr>
+            <tr>
+                <td>BMW</td>
+                <td>4.431</td>
+            </tr>
+            <tr>
+                <td>Land Rover</td>
+                <td>3.712</td>
+            </tr>
+            <tr>
+                <td>Kia</td>
+                <td>2.382</td>
+            </tr>
+            <tr>
+                <td>Porsche</td>
+                <td>2.044</td>
+            </tr>
+            <tr>
+                <td>Audi</td>
+                <td>1.830</td>
+            </tr>
+            <!-- Adicione as demais linhas conforme necessário -->
+        </tbody>
+    </table>
+    <div id="chart-container">
+        <button onclick="showChart()">Mostrar Gráfico</button>
+    </div>
+
+    <script>
+        function showChart() {
+            // Redireciona para a página do gráfico
+            window.location.href = "./grafico.html";
+        }
+
+
+    </script>
+</body>
+
+</html>
